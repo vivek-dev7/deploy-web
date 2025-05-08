@@ -1,0 +1,84 @@
+.orders-container {
+  padding: 20px;
+  background: #f8faff;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+/* Box Styling */
+.orders-box {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  width: 90%;
+  max-width: 900px;
+  overflow: hidden;
+}
+
+/* Scrollable Table Container */
+.orders-table-container {
+  max-height: 400px; /* Set scrollable height */
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: 10px;
+}
+
+/* Ensure Table Takes Full Width */
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Sticky Table Header */
+.orders-table thead th {
+  position: sticky;
+  top: 0;
+  background: #f4f4f4;
+  z-index: 2;
+  text-align: center;
+  padding: 12px;
+}
+
+/* Table Cell Styling */
+.orders-table th,
+.orders-table td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Hover Effect */
+.orders-table tbody tr:hover {
+  background: #f1faff;
+  transition: background 0.3s ease;
+}
+
+/* Buy & Sell Colors */
+.buy {
+  color: #27ae60;
+  font-weight: bold;
+}
+
+.sell {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+/* Custom Scrollbar */
+.orders-table-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.orders-table-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.orders-table-container::-webkit-scrollbar-thumb {
+  background: #1a73e8;
+  border-radius: 8px;
+}

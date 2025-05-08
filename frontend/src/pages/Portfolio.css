@@ -1,0 +1,299 @@
+/* Base Styles */
+body {
+  padding-top: 10px; /* For navbar */
+  padding-bottom: 60px; /* For footer */
+}
+
+.portfolio-section {
+  width: 100%;
+  max-width: 1000px;
+  margin: 1rem auto;
+  padding: 1.2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.portfolio-section.compact {
+  max-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+.portfolio-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.header-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.subtext {
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 0.2rem;
+}
+
+.current-value {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.header-right {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.75rem;
+}
+
+.stat span {
+  color: #666;
+  margin-bottom: 0.1rem;
+}
+
+.stat strong {
+  font-size: 0.85rem;
+}
+
+.positive {
+  color: #16a34a;
+}
+
+.negative {
+  color: #dc2626;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin: 0.3rem 0 0.8rem 0;
+  justify-content: center;
+}
+
+.filter-btn {
+  padding: 0.35rem 0.7rem;
+  font-size: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: #f3f4f6;
+  color: #4b5563;
+  font-weight: 500;
+}
+
+.filter-btn.profit {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.filter-btn.loss {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.filter-btn.active {
+  font-weight: 600;
+  transform: translateY(-1px);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.filter-btn.profit.active {
+  background: #22c55e;
+  color: white;
+}
+
+.filter-btn.loss.active {
+  background: #ef4444;
+  color: white;
+}
+
+.table-scroll-container {
+  width: 100%;
+  overflow-y: auto;
+  max-height: calc(70vh - 150px);
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.portfolio-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+}
+
+.portfolio-table th {
+  padding: 0.6rem;
+  text-align: left;
+  background: #f9fafb;
+  font-weight: 500;
+  color: #374151;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.portfolio-table td {
+  padding: 0.6rem;
+  border-bottom: 1px solid #e5e7eb;
+  vertical-align: middle;
+}
+
+.portfolio-table tr:last-child td {
+  border-bottom: none;
+}
+
+.portfolio-table tr:hover td {
+  background: #f9fafb;
+}
+
+.company-cell {
+  min-width: 140px;
+}
+
+.company-name {
+  font-weight: 500;
+  margin-bottom: 0.1rem;
+  font-size: 0.85rem;
+  color: black;
+}
+
+.company-sub {
+  font-size: 0.7rem;
+  color: #6b7280;
+}
+
+.price-cell,
+.returns-cell,
+.oneday-cell,
+.value-cell,
+.quantity-cell,
+.action-cell {
+  font-size: 0.8rem;
+}
+.price-cell{
+  color: black;
+}
+
+.returns-value,
+.oneday-value {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.1rem;
+  font-size: 0.8rem;
+}
+
+.returns-percentage,
+.oneday-percentage {
+  font-size: 0.7rem;
+  display: block;
+}
+
+.current-value {
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+
+.invested-value {
+  font-size: 0.7rem;
+  color: #6b7280;
+}
+
+.portfolio-table input[type="number"] {
+  width: 60px;
+  padding: 0.3rem;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 0.75rem;
+}
+
+.sell-btn {
+  padding: 0.35rem 0.7rem;
+  background: #f3f4f6;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.75rem;
+}
+
+.sell-btn.active {
+  background: #dc2626;
+  color: white;
+}
+
+.sell-btn.active:hover {
+  background: #b91c1c;
+}
+.current-value-table{
+  color: black;
+}
+
+.loading-pulse {
+  padding: 1rem;
+  text-align: center;
+  color: #4b5563;
+  font-size: 0.85rem;
+}
+
+.error-message {
+  padding: 1rem;
+  text-align: center;
+  color: #dc2626;
+  font-size: 0.85rem;
+  background: #fee2e2;
+  border-radius: 8px;
+}
+
+.empty-portfolio {
+  padding: 1rem;
+  text-align: center;
+  color: #4b5563;
+  font-size: 0.85rem;
+  background: #f3f4f6;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 60px;
+    padding-bottom: 50px;
+  }
+
+  .portfolio-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+  
+  .header-right {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  
+  .filter-buttons {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  
+  .portfolio-table th, 
+  .portfolio-table td {
+    padding: 0.5rem;
+  }
+}

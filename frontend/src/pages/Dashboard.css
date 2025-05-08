@@ -1,0 +1,304 @@
+/* Dashboard.css - Modern Responsive Styles */
+.dashboard-container {
+  padding: 24px;
+  background: #f8faff;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+}
+
+.dashboard-stocks-container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 1.2rem;
+  padding: 1.2rem 0;
+  justify-content: center;
+  scrollbar-width: thin;
+  scrollbar-color: #1a73e8 #f1f1f1;
+  -ms-overflow-style: none; /* Hide scrollbar IE and Edge */
+}
+
+.dashboard-stocks-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.dashboard-stocks-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.dashboard-stocks-container::-webkit-scrollbar-thumb {
+  background: #1a73e8;
+  border-radius: 10px;
+}
+
+.dashboard-stock-card {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  width: 220px;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-stock-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.dashboard-chart-section, .dashboard-trade-section {
+  background: white;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  flex: 1;
+  transition: transform 0.2s ease;
+}
+
+.dashboard-chart-section:hover, .dashboard-trade-section:hover {
+  transform: translateY(-3px);
+}
+
+.dashboard-time-period {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 1.2rem 0;
+}
+
+.dashboard-time-period button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  background-color: #f5f5f5;
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.dashboard-time-period button:hover {
+  background-color: #e0e0e0;
+}
+
+.dashboard-time-period button.active {
+  background-color: #1a73e8;
+  color: white;
+  box-shadow: 0 2px 8px rgba(26, 115, 232, 0.4);
+}
+
+/* Chart header section */
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.chart-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-title h2 {
+  margin: 0 0 5px 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.stock-price {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #666;
+  font-weight: 500;
+}
+
+/* Instagram-style bookmark button */
+.bookmark-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.bookmark-btn:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.bookmark-btn:active {
+  transform: scale(0.9);
+}
+
+.bookmark-filled {
+  fill: currentColor !important; 
+  color: #1a73e8 !important;
+  animation: bookmark-pulse 0.3s ease-out;
+}
+
+@keyframes bookmark-pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* Toast notifications */
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 14px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  color: white;
+  font-weight: 500;
+  z-index: 1000;
+  animation: fadeIn 0.3s, fadeOut 0.5s 2.5s;
+  max-width: 300px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.toast.success {
+  background-color: #4caf50;
+}
+
+.toast.error {
+  background-color: #f44336;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(-20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeOut {
+  from {opacity: 1; transform: translateY(0);}
+  to {opacity: 0; transform: translateY(-20px);}
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .dashboard-content {
+    flex-direction: column;
+  }
+  .dashboard-chart-section, .dashboard-trade-section {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-stocks-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .dashboard-stock-card {
+    width: 180px;
+  }
+  
+  .chart-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .bookmark-btn {
+    position: absolute;
+    right: 24px;
+    top: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-container {
+    padding: 12px;
+  }
+
+  .dashboard-time-period button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  
+  .dashboard-chart-section, .dashboard-trade-section {
+    padding: 16px;
+  }
+}
+
+/* Updated bookmark styles */
+.bookmark-btn {
+  position: relative;
+}
+
+.bookmark-filled {
+  fill: #1a73e8 !important;
+  color: #1a73e8 !important;
+  animation: bookmark-pulse 0.3s ease-out;
+}
+
+/* New Mosaic Loader Container */
+.mosaic-loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  flex: 1 1 65%;
+  min-width: 300px;
+  filter: blur(0.5px); /* Add blur effect */
+}
+
+/* Add these new styles to your Dashboard.css */
+.dashboard-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+/* Chart section (70% width) */
+.dashboard-chart-section, 
+.mosaic-loader-container {
+  flex: 1 1 65%;
+  min-width: 300px; /* Ensures it doesn't get too small on narrow screens */
+}
+
+/* Trade section (30% width) */
+.dashboard-trade-section {
+  flex: 1 1 33%; /* Slightly less than 30% to account for gap */
+  min-width: 250px; /* Minimum width before wrapping */
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 1024px) {
+  .dashboard-content {
+    flex-direction: column;
+  }
+  
+  .dashboard-chart-section,
+  .mosaic-loader-container,
+  .dashboard-trade-section {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+}

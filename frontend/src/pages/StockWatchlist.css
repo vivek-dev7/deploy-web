@@ -1,0 +1,140 @@
+/* Main container */
+.watchlist-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* Watchlist items */
+.watchlist-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  margin-bottom: 8px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.watchlist-item:hover {
+  background-color: #f9fafb;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Stock info section (left side) */
+.stock-info {
+  flex: 1;
+  min-width: 30%;
+}
+
+/* Stock name styles */
+.stock-name {
+  font-weight: 500;
+  color: #000;
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Stock symbol styles */
+.stock-symbol {
+  color: black;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+/* Sparkline section (middle) */
+.stock-sparkline {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin: 0 10px;
+  min-width: 80px;
+  margin-right: 20px;
+}
+
+/* Price info section (right side) */
+.stock-price-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  min-width: 90px;
+}
+
+/* Price styles */
+.stock-price {
+  font-weight: 500;
+  font-size: 1rem;
+  margin: 0;
+  transition: all 0.3s ease;
+  color: #000;
+}
+
+/* Returns/percentage styles */
+.stock-returns {
+  font-size: 0.75rem;
+  margin: 2px 0 0 0;
+  transition: color 0.3s ease;
+}
+
+/* Color indicators for price changes */
+.positive {
+  color: #0ecb81; /* Green for positive */
+}
+
+.negative {
+  color: #f6465d; /* Red for negative */
+}
+
+/* Price change animations */
+.price-up {
+  color: #0ecb81;
+  transform: translateY(-2px);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.price-down {
+  color: #f6465d;
+  transform: translateY(2px);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Loading and empty states */
+.loading-state,
+.empty-state {
+  text-align: center;
+  color: #6b7280;
+  padding: 16px 0;
+}
+
+/* Prevent blinking with smooth color transitions */
+.stock-price,
+.stock-returns {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+@keyframes priceUp {
+  from {
+    color: #0ecb81;
+    background-color: rgba(14, 203, 129, 0.1);
+  }
+  to {
+    color: #0ecb81;
+    background-color: transparent;
+  }
+}
+
+@keyframes priceDown {
+  from {
+    color: #f6465d;
+    background-color: rgba(246, 70, 93, 0.1);
+  }
+  to {
+    color: #f6465d;
+    background-color: transparent;
+  }
+}

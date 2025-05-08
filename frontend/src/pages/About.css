@@ -1,0 +1,183 @@
+/* Global Styles */
+/* made responsive page */
+.about-container {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  text-align: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Hero Section */
+.about-hero {
+  background: linear-gradient(135deg, #4A90E2, #142850);
+  color: white;
+  padding: 60px 20px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.about-hero h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.about-hero p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* Features Section */
+.features-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.feature-card {
+  background: white;
+  padding: 20px;
+  width: 100%;
+  max-width: 320px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.feature-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+/* Mission Section */
+.mission-section {
+  margin: 50px 0;
+  padding: 20px;
+  background: #f4f4f4;
+  border-radius: 10px;
+}
+
+.mission-text {
+  font-size: 1rem;
+  max-width: 800px;
+  margin: auto;
+  color: #555;
+}
+
+/* Development Team */
+.team-section {
+  margin: 50px 0;
+}
+
+.developers-header {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.developers-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.developer-item {
+  background: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 100%;
+  max-width: 180px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.developer-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.developer-item h4 {
+  margin-bottom: 5px;
+  font-size: 18px;
+  color: #222;
+}
+
+.developer-item p {
+  font-size: 14px;
+  color: #777;
+}
+
+/* Call-to-Action (CTA) */
+.cta-container {
+  margin-top: 40px;
+}
+
+.get-started-button {
+  background: #4A90E2;
+  color: white;
+  padding: 12px 25px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.get-started-button:hover {
+  background: #357ABD;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .about-hero p, .mission-text {
+    font-size: 0.9rem;
+  }
+
+  .features-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-card {
+    width: 90%;
+  }
+
+  .developers-row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .about-hero p, .mission-text {
+    font-size: 0.85rem;
+  }
+
+  .feature-card {
+    width: 100%;
+  }
+
+  .get-started-button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}

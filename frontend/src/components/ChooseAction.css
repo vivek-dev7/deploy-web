@@ -1,0 +1,30 @@
+.choose-action-container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .half {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .left {
+    background-color: #f0f0f0;
+  }
+  
+  .right {
+    background-color: #007bff;
+  }
+  
+  .action-button {
+    padding: 20px 40px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+  }
+  

@@ -1,0 +1,83 @@
+/* Footer.css - Coordinated with Home2 Design */
+.footer {
+  background: #ffffff;
+  color: #64748b;
+  padding: 4rem 2rem 2rem;
+  font-family: 'Inter', sans-serif;
+  border-top: 1px solid #e3e9f6;
+  box-shadow: 0 -8px 24px rgba(10, 31, 68, 0.04);
+  margin-top: auto;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem;
+  max-width: 1440px;
+  margin: 0 auto 3rem;
+}
+
+.footer-section {
+  padding: 1rem;
+}
+
+.footer-section h2 {
+  color: #0a1f44;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e3e9f6;
+}
+
+.footer-section p {
+  line-height: 1.8;
+  color: #64748b;
+}
+
+.footer-section a {
+  color: #3b82f6;
+  text-decoration: none;
+  transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-section a:hover {
+  color: #2563eb;
+}
+
+.contact-label {
+  color: #0a1f44;
+  font-weight: 500;
+  margin-right: 0.5rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 1rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid #e3e9f6;
+  color: #64748b;
+  font-size: 0.9rem;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .footer-section {
+    text-align: center;
+  }
+}

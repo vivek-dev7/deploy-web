@@ -1,0 +1,177 @@
+/* TradeSection.css */
+/* made responsive */
+/* Container for the entire trade section (centers the outer card) */
+.trade-section-container {
+  width: 100%;
+  padding: 20px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background: #ffffff;
+}
+
+/* Outer card container with gradient and subtle shadow */
+.outer-card {
+  width: 100%;
+  max-width: 400px; /* Limits width to prevent stretching on large screens */
+  background: linear-gradient(135deg, #ffffff, #e8eff9);
+  border-radius: 12px;
+  padding: 25px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title styling */
+.trade-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Header styling */
+.trade-header h3 {
+  font-size: 1.4rem;
+  color: #34495e;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Inner card: details container */
+.inner-card {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.inner-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Stock details text */
+.inner-card p {
+  font-size: 1.1rem;
+  color: #555;
+  margin: 10px 0;
+  text-align: center;
+}
+
+/* Button styles */
+.buy-btn,
+.confirm-btn {
+  background-color: #3a2dfd;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  margin-top: 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 100%;
+  max-width: 200px; /* Limits button size for better responsiveness */
+}
+
+.buy-btn:hover,
+.confirm-btn:hover {
+  background-color: #3126d3;
+  transform: scale(1.02);
+}
+
+/* Buy form styling */
+.trade-form {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.trade-form input[type="number"] {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 200px;
+}
+
+/* Loading and no details messages */
+.loading-msg,
+.no-details-msg {
+  font-size: 1.1rem;
+  color: #888;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Responsive adjustments for tablets and smaller screens */
+@media (max-width: 1024px) {
+  .outer-card {
+    width: 90%; /* Expands to 90% width on medium screens */
+    padding: 20px;
+  }
+  .inner-card {
+    padding: 15px;
+  }
+  .trade-title {
+    font-size: 1.8rem;
+  }
+  .trade-header h3 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Further adjustments for mobile devices */
+@media (max-width: 768px) {
+  .trade-section-container {
+    padding: 10px;
+  }
+  .outer-card {
+    width: 95%; /* Expands further for small screens */
+    padding: 15px;
+  }
+  .trade-title {
+    font-size: 1.6rem;
+  }
+  .trade-header h3 {
+    font-size: 1.2rem;
+  }
+  .buy-btn,
+  .confirm-btn {
+    padding: 10px 20px;
+  }
+}
+
+/* Optimizations for very small screens (phones) */
+@media (max-width: 480px) {
+  .trade-title {
+    font-size: 1.4rem;
+  }
+  .trade-header h3 {
+    font-size: 1.1rem;
+  }
+  .buy-btn,
+  .confirm-btn {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+  .trade-form input[type="number"] {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+}
